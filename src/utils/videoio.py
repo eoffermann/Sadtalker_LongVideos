@@ -6,7 +6,7 @@ import os
 import cv2
 
 def load_video_to_cv2(input_path):
-    video_stream = cv2.VideoCapture(input_path)
+    video_stream = cv2.VideoCapture(str(input_path))
     fps = video_stream.get(cv2.CAP_PROP_FPS)
     full_frames = [] 
     while 1:

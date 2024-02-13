@@ -8,7 +8,7 @@ cd SadTalker
 conda create -n sadtalker python=3.8
 conda activate sadtalker
 # install pytorch 2.0
-pip install torch torchvision torchaudio
+pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 torchaudio --extra-index-url https://download.pytorch.org/whl/cu113
 conda install ffmpeg
 pip install -r requirements.txt
 pip install dlib # macOS needs to install the original dlib.

@@ -16,11 +16,11 @@ Community tutorials: [中文Windows教程 (Chinese Windows tutorial)](https://ww
 
   cd SadTalker 
 
-  conda create -n sadtalker python=3.8
+  conda create -n sadtalker python=3.10.9
 
   conda activate sadtalker
 
-  pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
+  pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 torchaudio --extra-index-url https://download.pytorch.org/whl/cu113
 
   conda install ffmpeg
 

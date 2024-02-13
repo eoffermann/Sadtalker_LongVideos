@@ -29,12 +29,12 @@ def main(args):
 
     pic_path = args.source_image
     audio_path = args.driven_audio
-    # save_dir = os.path.join(args.result_dir, strftime("%Y_%m_%d_%H.%M.%S"))
+    save_dir = os.path.join(args.result_dir, strftime("%Y_%m_%d_%H.%M.%S"))
     aud_name = Path(audio_path).stem
-    aud_folder = Path(audio_path).parent
+    aud_folder = Path(save_dir)
     
     save_dir = aud_folder/'temp'
-    save_dir.mkdir(exist_ok=True)
+    save_dir.mkdir(parents=True, exist_ok=True)
     save_fn = aud_folder/f'{aud_name}.mp4'
     print(f'save filename {save_fn}')
     # os.makedirs(save_dir, exist_ok=True)

@@ -51,18 +51,18 @@ def generate_blink_seq_randomly(num_frames):
 def get_data(first_coeff_path, audio_path, device, ref_eyeblink_coeff_path, still=False, idlemode=False, length_of_audio=False, use_blink=True):
 
     syncnet_mel_step_size = 16
-    fps = 25
+    fps = 30
 
     pic_name = os.path.splitext(os.path.split(first_coeff_path)[-1])[0]
     audio_name = os.path.splitext(os.path.split(audio_path)[-1])[0]
 
     
     if idlemode:
-        num_frames = int(length_of_audio * 25)
+        num_frames = int(length_of_audio * fps)
         indiv_mels = np.zeros((num_frames, 80, 16))
     else:
         wav = audio.load_wav(audio_path, 16000) 
-        wav_length, num_frames = parse_audio_length(len(wav), 16000, 25)
+        wav_length, num_frames = parse_audio_length(len(wav), 16000, fps)
         wav = crop_pad_audio(wav, wav_length)
         orig_mel = audio.melspectrogram(wav).T
         spec = orig_mel.copy()         # nframes 80

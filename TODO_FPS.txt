@@ -1,0 +1,14 @@
+This project was such a mess for FPS reasons. I needed to switch it to 30fps but it should
+be configurable instead. It'll just take some work to feed the FPS through everything.
+
+Here are the locations where FPS is specified:
+
+FILE                                        LINES
+=======================================     ==========
+src/generate_batch.py                       54, 61, 65
+src/facerender/animate.py                   197, 200
+src/facerender/modules/make_animation.py    177
+src/utils/hparams.py                        66, 135
+src/utils/preprocess.py                     77
+
+Allowing fps to be specified as a parameter is pretty damn important.

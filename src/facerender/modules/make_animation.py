@@ -174,7 +174,7 @@ def make_animation(args, audio_path, save_dir, video_name, img_size, crop_info, 
         path = os.path.join(str(save_dir), 'temp_' + video_name + '.avi')
         print(f'video size {size1, size2}')
         openVideo = cv2.VideoWriter(path, 
-                                cv2.VideoWriter_fourcc(*'DIVX'), 25, (size2, size1))
+                                cv2.VideoWriter_fourcc(*'DIVX'), 30, (size2, size1))
         # openVideo = cv2.VideoWriter(path, -1, 25, (size2, size1))
         for pngFile in frame_dir.iterdir():
             if pngFile.suffix!=".png": continue

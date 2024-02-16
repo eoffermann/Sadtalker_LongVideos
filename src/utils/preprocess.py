@@ -74,7 +74,7 @@ class CropAndExtract():
         elif input_path.split('.')[-1] in ['jpg', 'png', 'jpeg']:
             # loader for first frame
             full_frames = [cv2.imread(input_path)]
-            fps = 25
+            fps = 30
         else:
             # loader for videos
             video_stream = cv2.VideoCapture(input_path)

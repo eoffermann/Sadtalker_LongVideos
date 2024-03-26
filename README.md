@@ -32,9 +32,30 @@ Community tutorials: [中文Windows教程 (Chinese Windows tutorial)](https://ww
   ```  
 ### Windows
 
-A video tutorial in chinese is available [here](https://www.bilibili.com/video/BV1Dc411W7V6/). You can also follow the following instructions:
+Updated instructions for Python 3.10.11:
 
-1. Install [Python 3.8](https://www.python.org/downloads/windows/) and check "Add Python to PATH".
+1. Install [Anaconda](https://www.anaconda.com/), Python and `git`.
+2. Creating the env and install the requirements.
+  ```cmd
+  git clone https://github.com/OpenTalker/SadTalker.git
+
+  cd SadTalker 
+
+  conda create -n sadtalker python=3.10.11
+
+  conda activate sadtalker
+
+  pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 torchaudio --extra-index-url https://download.pytorch.org/whl/cu113
+
+  conda install ffmpeg
+
+  pip install -r requirements.txt
+
+  ### Coqui TTS is optional for gradio demo. 
+  ### pip install TTS
+
+  ```  
+1. Install [Python 3.10.11](https://www.python.org/downloads/windows/) and check "Add Python to PATH".
 2. Install [git](https://git-scm.com/download/win) manually or using [Scoop](https://scoop.sh/): `scoop install git`.
 3. Install `ffmpeg`, following [this tutorial](https://www.wikihow.com/Install-FFmpeg-on-Windows) or using [scoop](https://scoop.sh/): `scoop install ffmpeg`.
 4. Download the SadTalker repository by running `git clone https://github.com/davoodwadi/SadTalker-Unlocked.git`.
